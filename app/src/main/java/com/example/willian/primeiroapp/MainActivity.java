@@ -44,12 +44,11 @@ public class MainActivity extends AppCompatActivity {
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                try{
+                                try {
                                     textView.setText(response.getString("parse_time_nanoseconds"));
-                                }catch (JSONException e){
+                                } catch (JSONException e) {
                                     Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                                 }
-
                             }
 
                         }, new Response.ErrorListener(){
